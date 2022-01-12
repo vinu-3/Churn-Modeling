@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+<style>
+h1{
+color:blue;
+font-family:verdana;
+font-size:300%;
+border: 2px solid powderblue;
+padding: 30px;
+background-color: powderblue;
+}
+
+body
+{
+    background-image: url(https://image.freepik.com/free-vector/customer-giving-quality-feedback_74855-5482.jpg);
+    background-size: cover;
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="login">
+        <h1><center>Bank Customer Churn Prediction</center></h1>
+    
+        <form action="{{ url_for('y_predict')}}"method="POST">
+ 
+    <div>
+        
+        <select id="geography" name="geography">
+         <option value="geography">geography </option>
+        <option value="Spain">spain </option>
+        <option value="Germany">germany </option>
+        <option value="Newyork">Newyork </option>
+        </select><br><br>
+        
+        
+      
+        <select id="gender" name="gender">
+         <option value="gender">gender </option>
+        <option value="0">male </option>
+        <option value="1">female </option>
+        
+        </select><br><br>
+        
+       
+        <select id="is active member" name="is active member">
+        <option value="is active member">isactive member </option>
+        <option value="yes"> yes </option>
+        <option value="No">No </option>
+        
+        </select><br><br>
+        
+        
+        
+        <select id="has credit card" name="has credit card">
+         <option value="has credit card">has credit card </option>
+        <option value="yes">yes </option>
+        <option value="No">No </option>
+        
+        </select><br><br>
+        
+        <input type="number" name="creditscore" placeholder="creditscore" required="required" />
+        
+        <input type="number" name="age" placeholder="age" required="required" />
+        <input type="number" name="balance" placeholder="balance" required="required" />        
+        <input type="number" name="no of" placeholder="no of" required="required" />
+        
+        <input type="number" name="estimated salary" placeholder="estimated salary" required="required" />
+        <input type="number" name="tenure" placeholder="tenure" required="required" />
+        
+        <button type="submit" class="btn btn-warning btn-block btn-large">Predict</button>
+     
+        
+        </div>
+        
+    
+        {{prediction_text}}
+    
+        <br>
+        <br>
+    </div>
+    
+    
+    </body>
+    </html>
+        
+        
